@@ -23,7 +23,7 @@ variable "aws_secret_key" {
 variable "aws_region" {
   description = "The AWS Region used for deployment"
   type        = string
-  default     = "us-east-1"
+  default     = "us-west-2"
 
   validation {
     condition     = can(regex("^([a-z]{2}-[a-z]{4,}-[\\d]{1})$", var.aws_region))

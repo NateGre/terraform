@@ -11,3 +11,8 @@ output "ssh_key_info" {
   value       = module.standard.ssh_key_info
   sensitive   = true
 }
+
+output "total_cost_estimate" {
+  value = module.pricing.total_monthly_price
+  description = "Estimated monthly cost for EC2 instances and EBS volumes"
+}

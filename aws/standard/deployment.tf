@@ -34,3 +34,15 @@ module "standard" {
   kasm_zone_name             = var.kasm_zone_name
   kasm_build                 = var.kasm_build
 }
+
+module "pricing" {
+  source  = "./modules"
+  
+  ec2_instance_type = var.webapp_instance_type
+  ec2_region        = var.aws_region
+  ebs_volume_size_gb = var.webapp_hdd_size_gb + var.agent_hdd_size_gb + var.db_hdd_size_gb
+}
+
+output "total_cost_estimate" {
+  value = module.pricing.total_monthly_price
+}

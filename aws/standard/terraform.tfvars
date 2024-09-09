@@ -1,6 +1,6 @@
 ## AWS Environment settings
 ssh_authorized_keys = ""
-aws_region          = ""
+aws_region          = "us-west-2"
 aws_domain_name     = "example.kasmweb.com"
 vpc_subnet_cidr     = "10.0.0.0/16"
 
